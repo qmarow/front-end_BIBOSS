@@ -124,13 +124,14 @@ export default {
 	position: relative;
 	margin-left: 32px;
 	margin-left: 2.1%;
-	/* width: 260px; */
+	width: 300px;
+	background-color: #FA961E;
 }
 
 .btn {
 	position: relative;
 	top: calc(50% - 42px / 2 - 0px);
-	margin-left: 43.5%;
+	margin-left: 39.3%;
 	widows: 139px;
 	height: 42px;
 
