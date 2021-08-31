@@ -77,7 +77,7 @@ export default {
 	font-family: Arial;
 	font-style: normal;
 	font-weight: bold;
-	box-shadow: 3px 0px 10px #FA961E;
+	box-shadow: 1px 1px 10px #85858523;
 }
 
 .iconLogo {
@@ -114,7 +114,7 @@ export default {
 .btn {
 	position: relative;
 	top: calc(50% - 42px / 2 - 0px);
-	/* left: 140px; */
+	margin-left: 43.5%;
 	widows: 139px;
 	height: 42px;
 
@@ -135,17 +135,25 @@ export default {
 }
 
 .iconMess {
+	margin-left: 2.1%;
 	width: 24px;
 	height: 24px;
 	position: relative;
-	top: calc(50% - 24px/ 2 - 0px)
+	top: calc(50% - 24px/ 2 - 0px);
+	transition: 0.1s;
+}.iconMess:hover {
+	transform: translateY(-3px);
 }
 
 .iconNotification {
+	margin-left: 2.1%;
 	width: 24px;
 	height: 24px;
 	position: relative;
-	top: calc(50% - 24px/ 2 - 0px)
+	top: calc(50% - 24px/ 2 - 0px);
+	transition: 0.1s;
+}.iconNotification:hover {
+	transform: translateY(-3px);
 }
 
 .blockPlusActive {
