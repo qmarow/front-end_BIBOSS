@@ -88,8 +88,8 @@ export default {
 .header {
 	display: flex;
 	flex-direction: row;
-	position: fixed;
 	height: 56px;
+	width: 100%;
 
 	font-family: Arial;
 	font-style: normal;
@@ -122,17 +122,16 @@ export default {
 	top: calc(50% - 24px/2 - 0px);
 	display: inline-block;
 	position: relative;
-	margin-left: 32px;
 	margin-left: 2.1%;
-	width: 300px;
-	background-color: #FA961E;
+	width: 19%;
+	min-width: 240px;
 }
 
 .btn {
 	position: relative;
 	top: calc(50% - 42px / 2 - 0px);
-	margin-left: 39.3%;
-	widows: 139px;
+	margin-left: 37.3%;
+	min-width: 139px;
 	height: 42px;
 
 	font-size: 16px;
@@ -177,7 +176,7 @@ export default {
 	margin-left: 2.1%;
 	position: relative;
 	top: calc(50% - 28px/ 2 - 0px);
-	width: 66px;
+	min-width: 66px;
 	height: 28px;
 	border-radius: 36px; 
 }

@@ -177,25 +177,21 @@ export default {
 
 .selectBlock {
 	display: inline-flex;
-	/* vertical-align: top; */
-	/* position: a; */
-	/* flex-direction: flex; */
-	/* justify-content: flex-end; */
 	align-items: center;
 	border: 1px solid rgba(179, 89, 89, 0);
 	padding: 0px 3px;
+	border: 2px solid #ffffff00;
+		border-top-width: 0px;
+	border-right-width: 0px;
+	border-left-width: 0px;
 	/* width: 100px; */
 }
 
 .selectBlock:hover {
-	border: 1px solid rgb(211, 203, 92);
-	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
-}.selectBlock:focus {
-	border: 1px solid rgb(211, 203, 92);
-	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
-}.selectBlock:active {
-	border: 1px solid rgb(211, 203, 92);
-	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+	border: 2px solid #e7eb0d62;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-left-width: 0px;
 }
 
 .imgBlock {
