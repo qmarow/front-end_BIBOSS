@@ -1,6 +1,6 @@
 <template>
 	<div class="select">
-		<div  @click="visible(null)" class="selectBlock">	
+		<div  @click="visible(null)"  class="selectBlock">	
 			<div :style="{'font-size': fontSize}" class="selectTxt">{{selectedComponent}}</div>
 			
 			<div class='menu-btn' :class="change ? 'menu-btn-1' : ''">
@@ -148,30 +148,25 @@ export default {
 }
 
 .optionsBlock {
-	/* border: 2px solid rgb(202, 197, 197); */
-	/* width: 100%;
-	height: 100px; */
+	border: 1px solid rgb(199, 199, 199);
+	border-radius: 10px;
+	background-color: rgb(255, 255, 255);
+	width: 100%;
 	padding: 0px 0px;
 	transition: 0.8s;
 }
 
 .option {
-	/* background-color: rgb(255, 255, 255); */
-	padding: 2.5% 3%;
-	margin: 0%;
-	/* padding: 0px 10%; */
-	/* list-style: none; */
-  color: rgb(7, 7, 7);
-  /* height: 0; */
-  line-height: 2em;
-  margin: 0;
-  padding: 0 0.5em;
-  /* overflow: hidden; */
-	transition: 0.1s;
-  /* width: 10em; */
+	display: inline-block;
+	margin: 2.5% 1%;
+	color: #070707;
+	/* line-height: 2em; */
+	padding: 4px 0.5em;
+  overflow: hidden;
+	transition: 0.2s;
 }.option:hover {
-	background: #d8d6d6;
-	
+	transform: translateX(5px);
+	background-color: rgba(255, 218, 11, 0.301);
 }
 
 
@@ -188,10 +183,7 @@ export default {
 }
 
 .selectBlock:hover {
-	border: 2px solid #e7eb0d62;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-left-width: 0px;
+
 }
 
 .imgBlock {

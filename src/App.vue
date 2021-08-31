@@ -43,6 +43,7 @@ export default {
   border-top-width: 0px;
   border-bottom-width: 0px;
 
+  z-index: 199;
   /* background-color: rgb(255, 255, 255); */
 }
 </style>

@@ -95,6 +95,7 @@ export default {
 	font-style: normal;
 	font-weight: bold;
 	box-shadow: 1px 1px 10px #85858523;
+	z-index: 200;
 }
 
 .iconLogo {
