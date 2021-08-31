@@ -8,8 +8,8 @@
 		<button class="btn">+ Объявление</button>
 		<img class="iconMess" src="./../images/iconMess.svg" />
 		<img class="iconNotification" src="./../images/iconNotification.svg" />
-		<div class="blockPlusInactive">
-			<span class="txtPlusInactive">ПЛЮС</span>
+		<div class="blockPlus" :class="getActiveBlockPlus">
+			<span class="txtPlus" :class="getActiveTextPlus">ПЛЮС</span>
 		</div>
 		<div class="blockAvatar">
 			<img class="photo" src="./../images/photoProfile.svg" />
@@ -31,7 +31,8 @@ export default {
 		return {
 			options: [
 				'Петропавловск-Камчатский', 'Киев', 'Казань', 'Набережные Челны', 'Елабуга' 
-			]
+			],
+			blockPlusActive: true,
 		}
 	},
 	methods: {
@@ -60,6 +61,22 @@ export default {
 			})
 		}
 	},
+	computed: {
+		getActiveBlockPlus() {
+			if (this.blockPlusActive) {
+				return 'BPActive';
+			} else {
+				return 'BPInactive';
+			} 
+		},
+		getActiveTextPlus() {
+			if (this.blockPlusActive) {
+				return 'TPActive';
+			} else {
+				return 'TPInactive';
+			} 
+		},
+	},
 	components: {
 			Selected: Selected,
 	}
@@ -86,7 +103,7 @@ export default {
 	width: 24px;
 	height: 24px;
 	top: calc(50% - 24px / 2 - 0px);
-	left: 2.3%;
+	margin-left: 2.3%;
 }
 
 .textLogo {
@@ -96,8 +113,7 @@ export default {
 	position: relative;
 	width: 106px;
 	height: 24px;
-	/* left: 48px; */
-	left: 3.35%;
+	margin-left: 0.54%;
 	top: calc(50% - 24px/2 - 0px);
 }
 
@@ -106,8 +122,8 @@ export default {
 	top: calc(50% - 24px/2 - 0px);
 	display: inline-block;
 	position: relative;
-	left: 98px;
-	left: 6.85%;
+	margin-left: 32px;
+	margin-left: 2.1%;
 	/* width: 260px; */
 }
 
@@ -156,54 +172,29 @@ export default {
 	transform: translateY(-3px);
 }
 
-.blockPlusActive {
+.blockPlus {
+	margin-left: 2.1%;
 	position: relative;
 	top: calc(50% - 28px/ 2 - 0px);
 	width: 66px;
 	height: 28px;
+	border-radius: 36px; 
+}
+
+.BPActive {
 	background-color: #FA961E;
-	border-radius: 36px; 
 }
 
-.txtPlusActive {
-	display: flex;
-	position: relative;
-	top: calc(50% - 22px/ 2 - 0px);
-	left: 13px;
-	width: 50px;
-	height: 21px;
-	background-color: #fff;
-	color: #FA961E;
-	border-radius: 36px;
-
-	padding-top: 1.2px;
-	justify-content: center;
-
-	font-family: Arial;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 12px;
-	line-height: 20px;
-}
-
-.blockPlusInactive {
-	position: relative;
-	top: calc(50% - 28px/ 2 - 0px);
-	width: 66px;
-	height: 28px;
+.BPInactive {
 	background-color:  rgba(0, 0, 0, 0.2);
-	border-radius: 36px; 
 }
 
-.txtPlusInactive {
+.txtPlus {
 	display: flex;
 	position: relative;
 	top: calc(50% - 22px/ 2 - 0px);
-	left: 3px;
 	width: 50px;
 	height: 21px;
-	background-color: #fff;
-	color:  rgba(0, 0, 0, 0.2);
 	border-radius: 36px;
 
 	padding-top: 1.2px;
@@ -214,9 +205,22 @@ export default {
 	font-weight: bold;
 	font-size: 12px;
 	line-height: 20px;
+}
+
+.TPActive {
+	left: 13px;
+	color: #FA961E;
+	background-color: #fff;
+}
+
+.TPInactive {
+	left: 3px;
+	color:  rgba(0, 0, 0, 0.2);
+	background-color: #fff;
 }
 
 .blockAvatar {
+	margin-left: 1.05%;
 	width: 64px;
 	height: 56px;
 	position: relative;
