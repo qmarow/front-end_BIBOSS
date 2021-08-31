@@ -50,18 +50,18 @@ export default {
 				for (let i = 1; i - 1 < this.optIndetifier.length; i++) {
 					setTimeout(() => {
 						this.optIndetifier[i - 1] = true;
-					}, i * 50)
+					}, i * 25)
 				}
 			} else if (this.isVisible == 1){
 				setTimeout(() => {
 					console.log('!!!!!!');
 					this.isVisible = 2;
-					}, 50 * this.optIndetifier.length)
+					}, 20 * this.optIndetifier.length)
 				for (let i = 1; i < this.optIndetifier.length + 1; i++) {
 					((j) => {
 						setTimeout(() => {
 							this.optIndetifier[this.optIndetifier.length - j] = false;
-						}, j * 50)
+						}, j * 20)
 					})(i)
 				}
 			}
@@ -149,9 +149,8 @@ export default {
 
 .optionsBlock {
 	/* border: 2px solid rgb(202, 197, 197); */
-	width: 100%;
-	height: 100px;
-	background-color: rgba(245, 67, 67, 0.89);
+	/* width: 100%;
+	height: 100px; */
 	padding: 0px 0px;
 	transition: 0.8s;
 }
@@ -218,8 +217,7 @@ export default {
 }
 
 .list-leave-active {
-	transition: 0.3s;
-	background: green;
+	transition: 0.1s;
 	opacity: 0;
 }
 
