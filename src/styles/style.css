@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* #app {
+    min-width: 1200px;
+} */
