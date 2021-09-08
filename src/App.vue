@@ -5,12 +5,16 @@
   <div class="menuBar">
     <MenuBar />
   </div>
+  <div class="contentPage">
+    <ContentPage/>
+  </div>
 </template>
 
 
 <script>
 import Header from './components/Header.vue'
 import MenuBar from './components/MenuBar.vue'
+import ContentPage from './components/ContentPage.vue'
 export default {
   props: {},
   data() {
@@ -19,6 +23,7 @@ export default {
   components: {
     Header: Header,
     MenuBar: MenuBar,
+    ContentPage: ContentPage,
   }
 }
 </script>
@@ -44,6 +49,17 @@ export default {
   border-bottom-width: 0px;
 
   z-index: 199;
-  /* background-color: rgb(255, 255, 255); */
+  background-color: rgb(255, 255, 255);
 }
+
+.contentPage {
+  position: relative;
+  display: block;
+  background-color: rgb(215, 248, 215);
+  width: 78%;
+  height: 100%;
+  left: 265px;
+  top: 48px
+}
+
 </style>
