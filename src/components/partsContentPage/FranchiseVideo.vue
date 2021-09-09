@@ -1,7 +1,7 @@
 <template>
 	<div class="mainBlock">
 		<div class="medalBlock">
-			<img src="./../images/medal.svg" />
+			<img src="./../../images/medal.svg" />
 			<div class="textsMedal">
 				<span :style="{'font-weight': 'normal'}">Конкурс БИБОСС</span>
 				<span :style="{'font-weight': 'bold'}">«Лучшее видео о франшизе»</span>
@@ -10,8 +10,8 @@
 		<div id="textPersonalSolution">Видео о франшизе «Персональное решение»</div>
 		<div :style="{'display': 'flex'}">	
 			<div id="blockVideo">
-				<video id="videoMedia" src="./../assets/FranchiseVideo.mp4" preload="auto" poster="./../images/firstCadr.jpg"/>
-				<img @click="startVideo()" src='./../images/iconPlayVideo.svg' id="btnPlay" :class="controlsVisible == true ? 'btnPlayOff' : 'btnPlayOn'" />
+				<video id="videoMedia" src="./../../assets/FranchiseVideo.mp4" preload="auto" poster="./../../images/firstCadr.jpg"/>
+				<img @click="startVideo()" src='./../../images/iconPlayVideo.svg' id="btnPlay" :class="controlsVisible == true ? 'btnPlayOff' : 'btnPlayOn'" />
 				<div @click="closeVideo()" v-if="controlsVisible" class='close-btn'>
 					<span></span>
 				</div>
@@ -20,18 +20,18 @@
 				<span>Голосование</span>
 				<p>Для того, чтобы проголосовать за видео, нужно сделать репост в любой из соцсетей:</p>
 				<div>
-					<div :style="{'background-color': 'rgba(31, 59, 116, 1)'}" class="vote">
-						<img src="./../images/iconFB.svg" />
+					<a href="https://ru-ru.facebook.com/" :style="{'background-color': 'rgba(31, 59, 116, 1)'}" class="vote">
+						<img src="./../../images/iconFB.svg" />
 						<div class="voteTxt">Голосовать FB</div>
-					</div>
-					<div :style="{'background-color': 'rgba(39, 70, 106, 1)'}" class="vote">
-						<img src="./../images/iconVK.svg" />
+					</a>
+					<a href="https://vk.com/im?peers=442227683_178451614" :style="{'background-color': 'rgba(39, 70, 106, 1)'}" class="vote">
+						<img src="./../../images/iconVK.svg" />
 						<div class="voteTxt">Голосовать VK</div>
-					</div>
-					<div :style="{'background-color': 'rgba(208, 99, 19, 1)'}" class="vote">
-						<img src="./../images/iconOK.svg" />
+					</a>
+					<a href="" :style="{'background-color': 'rgba(208, 99, 19, 1)'}" class="vote">
+						<img src="./../../images/iconOK.svg" />
 						<div class="voteTxt">Голосовать OK</div>
-					</div>
+					</a>
 				</div>
 				<div id="countVote">657 голосов</div>
 			</div>
@@ -72,7 +72,6 @@ export default {
 <style scoped>
 
 .mainBlock {
-		/* position: absolute; */
 	/* width: 100%; */
 	padding-left: 7%;
 	height: 800px;
@@ -84,7 +83,9 @@ export default {
 }
 
 .medalBlock {
-	margin: 28px 0px 0px 48px;
+	top: 28px;
+	left: 4.4%;
+	position: relative;
 	display: flex;
 	width: 338px;
 	height: 60px;
@@ -104,7 +105,7 @@ export default {
 }
 
 #textPersonalSolution {
-	margin-top: 24px;
+	margin-top: 48px;
 	margin-left: 4.4%;
 	font-size: 48px;
 	font-family: Arial;
@@ -112,8 +113,8 @@ export default {
 }
 
 #blockVideo {
-	margin-left: 50px;
-	margin-top: 50px;
+	margin-left: 4.4%;
+	margin-top: 36px;
 	position: relative;
 	display: inline-block;
 }
@@ -184,7 +185,7 @@ export default {
 }
 
 #columnVote {
-	margin-top: 60px;
+	margin-top: 46px;
 	margin-left: 10px;
 	display: inline-block;
 	/* background-color: lightsalmon; */
@@ -218,6 +219,7 @@ export default {
 	border-radius: 30px;
 	width: 256px;
 	height: 60px;
+	text-decoration: none;
 }
 
 #countVote {
