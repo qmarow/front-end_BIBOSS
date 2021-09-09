@@ -73,10 +73,10 @@ export default {
   z-index: 10;
   position: relative;
   display: block;
-  background-color: rgb(215, 248, 215);
-  width: 82%;
+  /* background-color: rgb(94, 255, 94); */
+  width: 100%;
   height: 100%;
-  left: calc(9%);
+  /* left: calc(9%); */
   top: 48px
 }
 

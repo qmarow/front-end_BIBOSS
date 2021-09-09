@@ -73,12 +73,12 @@ export default {
 
 .mainBlock {
 		/* position: absolute; */
-	width: 100%;
+	/* width: 100%; */
+	padding-left: 7%;
 	height: 800px;
 	left: 304px;
 	top: 860px;
 
-	background: linear-gradient(0deg, #ECEEF2 0%, rgba(236, 238, 242, 0) 100%);
 	/* transform: matrix(1, 0, 0, -1, 0, 0); */
 	/* background-color: hotpink; */
 }
@@ -116,7 +116,6 @@ export default {
 	margin-top: 50px;
 	position: relative;
 	display: inline-block;
-	background-color: aqua;
 }
 
 #videoMedia {
