@@ -8,11 +8,32 @@
 			</div>
 		</div>
 		<div id="textPersonalSolution">Видео о франшизе «Персональное решение»</div>
-		<div id="blockVideo">
-			<video id="videoMedia" src="./../assets/FranchiseVideo.mp4" preload="auto" poster="./../images/firstCadr.jpg"/>
-			<img @click="startVideo()" src='./../images/iconPlayVideo.svg' id="btnPlay" :class="controlsVisible == true ? 'btnPlayOff' : 'btnPlayOn'" />
-			<div @click="closeVideo()" v-if="controlsVisible" class='menu-btn' :class="change ? 'menu-btn-1' : ''">
-				<span></span>
+		<div :style="{'display': 'flex'}">	
+			<div id="blockVideo">
+				<video id="videoMedia" src="./../assets/FranchiseVideo.mp4" preload="auto" poster="./../images/firstCadr.jpg"/>
+				<img @click="startVideo()" src='./../images/iconPlayVideo.svg' id="btnPlay" :class="controlsVisible == true ? 'btnPlayOff' : 'btnPlayOn'" />
+				<div @click="closeVideo()" v-if="controlsVisible" class='close-btn'>
+					<span></span>
+				</div>
+			</div>
+			<div id='columnVote'>
+				<span>Голосование</span>
+				<p>Для того, чтобы проголосовать за видео, нужно сделать репост в любой из соцсетей:</p>
+				<div>
+					<div :style="{'background-color': 'rgba(31, 59, 116, 1)'}" class="vote">
+						<img src="./../images/iconFB.svg" />
+						<div class="voteTxt">Голосовать FB</div>
+					</div>
+					<div :style="{'background-color': 'rgba(39, 70, 106, 1)'}" class="vote">
+						<img src="./../images/iconVK.svg" />
+						<div class="voteTxt">Голосовать VK</div>
+					</div>
+					<div :style="{'background-color': 'rgba(208, 99, 19, 1)'}" class="vote">
+						<img src="./../images/iconOK.svg" />
+						<div class="voteTxt">Голосовать OK</div>
+					</div>
+				</div>
+				<div id="countVote">657 голосов</div>
 			</div>
 		</div>
 	</div>
@@ -122,7 +143,7 @@ export default {
 	width: 10px;
 }
 
-.menu-btn {
+.close-btn {
 	/* margin-left: 7px; */
 	top: 1%;
 	left: 96%;
@@ -134,16 +155,11 @@ export default {
 	border-radius: 50%;
 	position: absolute;
 	transition: 0.3s;
-}
-
-.menu-btn:hover {
+}.close-btn:hover {
 	border: 2px solid rgb(196, 196, 196);
 
-}
-
-.menu-btn span::before,
-.menu-btn span::after 
-{
+}.close-btn span::before,
+.close-btn span::after{
 	border-radius: 10px;
 	width: 15px;
 	height: 2px;
@@ -151,31 +167,69 @@ export default {
 	position: absolute;
 	top: 50%; margin-top: -1px;
 	left: calc(50% - 7.5px);
-}
-
-.menu-btn span::before {
+}.close-btn span::before {
 	transform: rotate(-45deg);
-}
-.menu-btn span::after 
-{
+}.close-btn span::after {
 	transform: rotate(45deg);
-}
-
-.menu-btn span::before,
-.menu-btn span::after {
+}.close-btn span::before,
+.close-btn span::after {
 	content: '';
 	display: block;
 	transition: 0.1s;
-}
-
-.menu-btn:hover span::after {
+}.close-btn:hover span::after {
+	width: 12px;
+	left: calc(50% - 6px);
+}.close-btn:hover span::before {
 	width: 12px;
 	left: calc(50% - 6px);
 }
 
-.menu-btn:hover span::before {
-	width: 12px;
-	left: calc(50% - 6px);
+#columnVote {
+	margin-top: 60px;
+	margin-left: 10px;
+	display: inline-block;
+	/* background-color: lightsalmon; */
+	width: 256px;
+	font-family: Arial;
+	font-style: normal;
+} #columnVote span {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 32px;
+} #columnVote p {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.voteTxt {
+	margin-top: 20px;
+	padding: 0px;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 24px;
+	margin-left: 15px;
+	color: #fff;
+}
+
+.vote {
+	margin-top: 8px;
+	display: flex;
+	border-radius: 30px;
+	width: 256px;
+	height: 60px;
+}
+
+#countVote {
+	font-family: Arial;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 24px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
 }
 
 </style>

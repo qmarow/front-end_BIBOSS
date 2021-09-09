@@ -1,6 +1,6 @@
 <template>
 	<div class="select">
-		<div  @click="visible(null)"  class="selectBlock">	
+		<div @click="visible(null)"  class="selectBlock">	
 			<div :style="{'font-size': fontSize}" class="selectTxt">{{selectedComponent}}</div>
 			
 			<div class='menu-btn' :class="change ? 'menu-btn-1' : ''">
@@ -29,6 +29,9 @@ export default {
 				type: String, 
 				// default: '110px',
 			},
+			isVisibleProps: {
+				type: Number,
+			}
 	},
 	mounted() {
 		for (var i = 0; i < this.options.length; i++) {
@@ -50,18 +53,17 @@ export default {
 				for (let i = 1; i - 1 < this.optIndetifier.length; i++) {
 					setTimeout(() => {
 						this.optIndetifier[i - 1] = true;
-					}, i * 25)
+					}, i * 50)
 				}
 			} else if (this.isVisible == 1){
 				setTimeout(() => {
-					console.log('!!!!!!');
 					this.isVisible = 2;
-					}, 20 * this.optIndetifier.length)
+					}, 50 * this.optIndetifier.length)
 				for (let i = 1; i < this.optIndetifier.length + 1; i++) {
 					((j) => {
 						setTimeout(() => {
 							this.optIndetifier[this.optIndetifier.length - j] = false;
-						}, j * 20)
+						}, j * 50)
 					})(i)
 				}
 			}
@@ -110,19 +112,15 @@ export default {
 	position: absolute;
 	top: 50%; margin-top: -1px;
 }
-
 .menu-btn span::before
 {
 	transform: rotate(-45deg);
 	right: 50%; margin-right: -8.4px;
-}
-.menu-btn span::after 
+}.menu-btn span::after 
 {
 	transform: rotate(45deg);
 	left: 50%; margin-left: -8.4px;
-}
-
-.menu-btn span::before,
+}.menu-btn span::before,
 .menu-btn span::after {
 	content: '';
 	display: block;
@@ -133,15 +131,15 @@ export default {
 	transform: rotate(45deg);
 	width: 10.5px;
 	/* transform-origin: right top; */
-}
-.menu-btn-1 span::after {
+}.menu-btn-1 span::after {
 	transform: rotate(-45deg);
 	width: 10.5px;
 	/* transform-origin: left top; */
 }
 
 .select {
-	/* display: inline-block; */
+	/* background-color: rgba(255, 74, 74, 0.493); */
+	display: inline-block;
 	font-family: Arial;
 	font-style: normal;
 	font-weight: normal;
@@ -152,8 +150,9 @@ export default {
 	border-radius: 10px;
 	background-color: rgb(255, 255, 255);
 	width: 100%;
+	height: 166px;
 	padding: 0px 0px;
-	transition: 0.8s;
+	transition: 1s;
 }
 
 .option {
@@ -162,11 +161,12 @@ export default {
 	color: #070707;
 	/* line-height: 2em; */
 	padding: 4px 0.5em;
-  overflow: hidden;
+	overflow: hidden;
 	transition: 0.2s;
 }.option:hover {
 	transform: translateX(5px);
-	background-color: rgba(255, 218, 11, 0.301);
+	background-color: rgba(77, 255, 32, 0.301);
+	border-radius: 10px;
 }
 
 
@@ -176,14 +176,11 @@ export default {
 	border: 1px solid rgba(179, 89, 89, 0);
 	padding: 0px 3px;
 	border: 2px solid #ffffff00;
-		border-top-width: 0px;
+	border-top-width: 0px;
 	border-right-width: 0px;
 	border-left-width: 0px;
+	/* background-color: lightgoldenrodyellow; */
 	/* width: 100px; */
-}
-
-.selectBlock:hover {
-
 }
 
 .imgBlock {
@@ -204,8 +201,26 @@ export default {
 	height: 24px;
 }
 
-.list-leave-active {
+.list-enter {
 	transition: 0.1s;
+	height: 0px;
+	opacity: 0;
+}
+
+.list-enter-active {
+	transition: .1s;
+	opacity: 1;
+	height: 0px;
+}.list-enter-to {
+	transition: .3s;
+	opacity: 1;
+	height: 165px;
+}
+
+
+.list-leave-active {
+	height: 0px;
+	transition: 0.2s;
 	opacity: 0;
 }
 

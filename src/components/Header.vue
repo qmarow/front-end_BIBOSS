@@ -1,5 +1,8 @@
 <template>
 	<div class="header">
+		<a @click="$emit('changeBar')" class="menu-btn-bar" :class="visibleBar ? 'menu-btn-bar_active' : ''">
+			<span></span>
+		</a>
 		<img class="iconLogo" src="./../images/iconBiBOSS.svg" />
 		<div class="textLogo">БИБОСС</div>
 		<div class="selected">
@@ -26,7 +29,8 @@
 import Selected from './Selected.vue'
 
 export default {
-	props: {},
+	props: ['visibleBar'],
+	emits: ['changeBar'],
 	data() {
 		return {
 			options: [
@@ -84,7 +88,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .header {
 	display: flex;
 	flex-direction: row;
@@ -95,22 +99,21 @@ export default {
 	font-style: normal;
 	font-weight: bold;
 	box-shadow: 1px 1px 10px #85858523;
-	z-index: 200;
 }
 
 .iconLogo {
 	position: relative;
-	display: inline-block;
+	/* display: inline; */
 	width: 24px;
 	height: 24px;
 	top: calc(50% - 24px / 2 - 0px);
-	margin-left: 2.3%;
+	/* margin-left: 0.1%; */
 }
 
 .textLogo {
 	font-size: 24px;
 
-	display: inline;
+	/* display: inline; */
 	position: relative;
 	width: 106px;
 	height: 24px;
@@ -121,7 +124,7 @@ export default {
 .selected {
 	height: 24px;
 	top: calc(50% - 24px/2 - 0px);
-	display: inline-block;
+	/* display: inline-block; */
 	position: relative;
 	margin-left: 2.1%;
 	width: 19%;
@@ -131,7 +134,8 @@ export default {
 .btn {
 	position: relative;
 	top: calc(50% - 42px / 2 - 0px);
-	margin-left: 37.3%;
+	margin-left: 36.3%;
+	left: 0%;
 	min-width: 139px;
 	height: 42px;
 
@@ -256,4 +260,54 @@ export default {
 	width: 35px;
 	height: 4px;
 }
+
+.menu-btn-bar {
+	top: calc(50% - 20px);
+  display: block;
+  width: 40px;
+  height: 40px;
+  /* background-color: rgb(252, 126, 126); */
+  /* border-radius: 50%; */
+  position: relative;
+}
+.menu-btn-bar span,
+.menu-btn-bar span::before,
+.menu-btn-bar span::after {
+  position: absolute;
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -9px;
+  width: 18px;
+  height: 2px;
+  background-color: rgb(197, 197, 197);
+	transition: .1s;
+}
+.menu-btn-bar span::before,
+.menu-btn-bar span::after {
+	transition: 0.2s;
+  content: '';
+  display: block;
+}
+.menu-btn-bar span::before {
+  transform: translateY(-6px);
+}
+.menu-btn-bar span::after {
+  transform: translateY(6px);
+}
+
+.menu-btn-bar_active span {
+	width: 0px;
+	margin-left: 0%;
+}
+
+.menu-btn-bar_active span:before {
+	transition: 0.2s;
+	transform: rotate(-135deg);
+  width: 20px;
+}
+.menu-btn-bar_active span:after {
+	transition: 0.2s;
+  transform:  rotate(135deg);
+  width: 20px;
+}
+
 </style>

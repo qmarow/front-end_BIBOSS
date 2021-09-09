@@ -1,9 +1,16 @@
 <template>
   <div class="header">
-    <Header />
+    <Header :visibleBar="visibleBar" @changeBar="changeVisibleBar"/>
   </div>
-  <div class="menuBar">
-    <MenuBar />
+  <div>
+    <transition name="menuBar">
+      <div v-if='visibleBar' class="menuBar">
+        <MenuBar />
+      </div>
+    </transition>
+    <transition name='closingBlock'>
+      <div v-if='visibleBar' id="closingBlock" @click="changeVisibleBar"></div>
+    </transition>
   </div>
   <div class="contentPage">
     <ContentPage/>
@@ -18,8 +25,15 @@ import ContentPage from './components/ContentPage.vue'
 export default {
   props: {},
   data() {
-    return {}
-},
+    return {
+      visibleBar: false,
+    }
+  },
+  methods: {
+    changeVisibleBar() {
+      this.visibleBar = !this.visibleBar;
+    }
+  },
   components: {
     Header: Header,
     MenuBar: MenuBar,
@@ -32,6 +46,7 @@ export default {
 <style scoped>
 
 .header {
+  z-index: 200;
   width: 100%;
   position: fixed;
   background-color: #fff;
@@ -50,16 +65,56 @@ export default {
 
   z-index: 199;
   background-color: rgb(255, 255, 255);
+
+  transition: 0.5s;
 }
 
 .contentPage {
+  z-index: 10;
   position: relative;
   display: block;
   background-color: rgb(215, 248, 215);
-  width: 78%;
+  width: 82%;
   height: 100%;
-  left: 265px;
+  left: calc(9%);
   top: 48px
 }
+
+.menuBar-enter-active {
+  transition: .2s;
+  transform: translateX(-304px);
+}
+
+.menuBar-enter-to {
+  transition: .2s;
+  transform: translateX(0px);
+  opacity: 1;
+}
+.menuBar-leave-active {
+  transform: translateX(-304px);
+  transition: .3s;
+  opacity: 0;
+}
+
+#closingBlock {
+  z-index: 190;
+  position: fixed;
+  top: 56px;
+  background-color: rgba(34, 34, 34, 0.651);
+  width: 100%;
+  height: calc(100% - 56px);
+}
+
+.closingBlock-enter-active {
+  transition: 0s;
+  opacity: 0.5;
+}.closingBlock-enter-to {
+  transition: 0.2s;
+  opacity: 1;
+}.closingBlock-leave-active {
+  transition: 0.1s;
+  opacity: 0;
+}
+
 
 </style>

@@ -21,6 +21,7 @@ export default {
 
 <style scoped>
 .redCircle {
+  z-index: 1;
 	display: block;
 	position: absolute;
 	width: 100%;
@@ -29,7 +30,6 @@ export default {
 	background-color: rgba(77, 255, 32, 0.301);
 
 	top: 8px;
-	left: 40px;
 }
 
 </style>
