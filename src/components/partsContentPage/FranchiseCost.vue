@@ -17,7 +17,9 @@
 		</div>
 		<hr id='hr'>
 		<div id='downloadBlock'>
-			<img id="imgDownload" src="./../../images/iconDownload.svg" />
+			<div id="imgDownload">
+				<img id="img" src="./../../images/iconDownload.svg" />
+			</div>
 			<span :style="{'margin-left': '10px'}">Запросить финансовый план</span>
 		</div>
 	</div>
@@ -103,6 +105,30 @@ export default {
 	width: 24px;
 	height: 24px;
 	padding: 13px;
+}
+
+#imgDownload:hover #img{
+	/* background-color: crimson; */
+	animation: jump 2s infinite;
+}
+
+@keyframes jump {
+  0% {
+		margin-top: 0px;
+  }
+
+  20% {
+    margin-top: 10px;
+  }
+	40% {
+    margin-top: 0px;
+	}
+	60% {
+    margin-top: 10px;
+	}
+	100% {
+    margin-top: 0px;
+	}
 }
 
 </style>

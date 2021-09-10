@@ -2,7 +2,6 @@
 	<div class="select">
 		<div @click="visible(null)"  class="selectBlock">	
 			<div :style="{'font-size': fontSize}" class="selectTxt">{{selectedComponent}}</div>
-			
 			<div class='menu-btn' :class="change ? 'menu-btn-1' : ''">
 				<span></span>
 			</div>
@@ -99,8 +98,6 @@ export default {
 	border-radius: 50%;
 	position: relative;
 }
-
-/* .menu-btn span, */
 
 .menu-btn span::before,
 .menu-btn span::after 

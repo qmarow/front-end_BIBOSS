@@ -11,13 +11,7 @@
 			</div>
 		</div>
 		<div id="blockAgent">
-			<div id="agentInfo">
-				<img src="./../../images/photoAgent.svg" />
-				<div id='txtInfo'>
-					<p>Дмитрий Варфоломеев</p>
-					<p>Представитель</p>
-				</div>
-			</div>
+			<BlockAgent />
 			<div>
 				<button id="btnRequestPhinplan">Запросить финплан</button>
 			</div>
@@ -27,12 +21,15 @@
 
 
 <script>
+import BlockAgent from './auxiliaryElements/BlockAgent.vue'
 export default {
   props: {},
   data() {
 	return {}
 },
-  components: {}
+  components: {
+	BlockAgent: BlockAgent,
+  }
 }
 </script>
 
@@ -81,23 +78,6 @@ export default {
 	line-height: 24px;
 }
 
-#agentInfo {
-
-	display: flex;
-	font-family: Arial;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 24px;
-}
-
-#txtInfo {
-	margin-left: 8px;
-	padding: 0px;
-} #txtInfo p {
-	padding: 0px;
-	margin: 0px;
-}
 
 #btnRequestPhinplan {
 	margin-top: 16px;

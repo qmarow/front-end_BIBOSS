@@ -54,7 +54,7 @@ export default {
   padding-left: 10.5%;
   margin-top: 126px;
   position: relative;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 </style>
