@@ -5,12 +5,16 @@
   <div id='personalSolutionW'>
     <PersonalSolutionW />
   </div>
+  <div id="aboutCompany">
+    <AboutCompany />
+  </div>
 </template>
 
 
 <script>
 import FranchiseVideo from './partsContentPage/FranchiseVideo.vue'
 import PersonalSolutionWindow from './partsContentPage/PersonalSolutionWindow.vue'
+import AboutCompany from './partsContentPage/AboutCompany.vue'
 export default {
   props: {},
   data() {
@@ -19,6 +23,7 @@ export default {
   components: {
       FranchiseVideo: FranchiseVideo,
       PersonalSolutionW: PersonalSolutionWindow,
+      AboutCompany: AboutCompany,
   }
 }
 </script>
@@ -43,6 +48,13 @@ export default {
   top: 720px;
   position: absolute;
   z-index: 190;
+}
+
+#aboutCompany {
+  padding-left: 10.5%;
+  margin-top: 126px;
+  position: relative;
+  background-color: aqua;
 }
 
 </style>
