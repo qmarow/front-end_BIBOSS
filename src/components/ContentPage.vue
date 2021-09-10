@@ -5,8 +5,13 @@
   <div id='personalSolutionW'>
     <PersonalSolutionW />
   </div>
-  <div id="aboutCompany">
-    <AboutCompany />
+  <div :style="{'display': 'flex'}">
+    <div id="aboutCompany">
+      <AboutCompany />
+    </div>
+    <div id="Indicators">
+      <Indicators />
+    </div>
   </div>
 </template>
 
@@ -15,6 +20,7 @@
 import FranchiseVideo from './partsContentPage/FranchiseVideo.vue'
 import PersonalSolutionWindow from './partsContentPage/PersonalSolutionWindow.vue'
 import AboutCompany from './partsContentPage/AboutCompany.vue'
+import Indicators from './partsContentPage/Indicators.vue'
 export default {
   props: {},
   data() {
@@ -24,6 +30,7 @@ export default {
       FranchiseVideo: FranchiseVideo,
       PersonalSolutionW: PersonalSolutionWindow,
       AboutCompany: AboutCompany,
+      Indicators: Indicators,
   }
 }
 </script>
@@ -55,6 +62,11 @@ export default {
   margin-top: 126px;
   position: relative;
   /* background-color: aqua; */
+}
+
+#Indicators {
+  margin-top: 126px;
+  margin-left: 32px;
 }
 
 </style>
