@@ -68,9 +68,7 @@ export default {
 <style scoped>
 
 #main {
-	width: 832px;
-	height: 550px;
-	padding: 24px;
+	padding: 24px 0px 24px 24px;
 	border-radius: 16px;
 	background-color: #ECEEF2;
 	font-family: Arial;

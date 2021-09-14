@@ -15,6 +15,9 @@
   <div class="contentPage">
     <ContentPage/>
   </div>
+  <div id="basement">
+    <Basement/>
+  </div>
 </template>
 
 
@@ -22,6 +25,7 @@
 import Header from './components/Header.vue'
 import MenuBar from './components/MenuBar.vue'
 import ContentPage from './components/ContentPage.vue'
+import Basement from './components/Basement.vue'
 export default {
   props: {},
   data() {
@@ -38,6 +42,7 @@ export default {
     Header: Header,
     MenuBar: MenuBar,
     ContentPage: ContentPage,
+    Basement: Basement,
   }
 }
 </script>
@@ -78,6 +83,11 @@ export default {
   height: 100%;
   /* left: calc(9%); */
   top: 48px
+}
+
+#basement {
+  position: relative;
+  top: 48px;
 }
 
 .menuBar-enter-active {

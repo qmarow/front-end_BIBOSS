@@ -72,23 +72,22 @@ export default {
 <style scoped>
 
 .mainBlock {
+	padding: 0px;
+	/* display: inline-block; */
 	/* width: 100%; */
-	padding-left: 7%;
 	height: 800px;
-	left: 304px;
-	top: 860px;
 
 	/* transform: matrix(1, 0, 0, -1, 0, 0); */
-	/* background-color: hotpink; */
+	background-color: hotpink;
 }
 
 .medalBlock {
 	top: 28px;
-	left: 4.4%;
 	position: relative;
 	display: flex;
 	width: 338px;
 	height: 60px;
+	/* transition: 0.1s; */
 }
 
 .textsMedal {
@@ -106,14 +105,12 @@ export default {
 
 #textPersonalSolution {
 	margin-top: 48px;
-	margin-left: 4.4%;
 	font-size: 48px;
 	font-family: Arial;
 	font-style: normal;
 }
 
 #blockVideo {
-	margin-left: 4.4%;
 	margin-top: 36px;
 	position: relative;
 	display: inline-block;

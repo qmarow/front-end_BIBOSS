@@ -1,24 +1,28 @@
 <template>
 	<div class="header">
-		<a @click="$emit('changeBar')" class="menu-btn-bar" :class="visibleBar ? 'menu-btn-bar_active' : ''">
-			<span></span>
-		</a>
-		<img class="iconLogo" src="./../images/iconBiBOSS.svg" />
-		<div class="textLogo">БИБОСС</div>
-		<div class="selected">
-			<Selected :options="options" fontSize="16px"/>
+		<div id="left-part-header">
+			<a @click="$emit('changeBar')" class="menu-btn-bar" :class="visibleBar ? 'menu-btn-bar_active' : ''">
+				<span></span>
+			</a>
+			<img class="iconLogo" src="./../images/iconBiBOSS.svg" />
+			<div class="textLogo">БИБОСС</div>
+			<div class="selected">
+				<Selected :options="options" fontSize="16px"/>
+			</div>
 		</div>
-		<button class="btn">+ Объявление</button>
-		<img class="iconMess" src="./../images/iconMess.svg" />
-		<img class="iconNotification" src="./../images/iconNotification.svg" />
-		<div class="blockPlus" :class="getActiveBlockPlus">
-			<span class="txtPlus" :class="getActiveTextPlus">ПЛЮС</span>
-		</div>
-		<div class="blockAvatar">
-			<img class="photo" src="./../images/photoProfile.svg" />
-			<span class="redCircle"></span>
-			<div class="checkers">
-				<div v-for="i in 5" :key="i" :style="getActive(i)"></div>
+		<div id="right-part-header">
+			<button class="btn">+ Объявление</button>
+			<img class="iconMess" src="./../images/iconMess.svg" />
+			<img class="iconNotification" src="./../images/iconNotification.svg" />
+			<div class="blockPlus" :class="getActiveBlockPlus">
+				<span class="txtPlus" :class="getActiveTextPlus">ПЛЮС</span>
+			</div>
+			<div class="blockAvatar">
+				<img class="photo" src="./../images/photoProfile.svg" />
+				<span class="redCircle"></span>
+				<div class="checkers">
+					<div v-for="i in 5" :key="i" :style="getActive(i)"></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -89,9 +93,28 @@ export default {
 
 
 <style scoped>
-.header {
+
+#left-part-header {
 	display: flex;
-	flex-direction: row;
+	float: left;
+	height: 56px;
+	/* width: 530px; */
+	background: rgb(78, 78, 252);
+}
+
+#right-part-header {
+	float: right;
+	display: flex;
+	justify-content: right;
+	/* flex-direction: row; */
+	/* width: 550px; */
+	background: rgb(245, 86, 86);
+	/* margin-left: 40% */
+}
+
+.header {
+	background-color: brown;
+	/* display: flex; */
 	height: 56px;
 	width: 100%;
 
@@ -102,40 +125,36 @@ export default {
 }
 
 .iconLogo {
-	position: relative;
-	/* display: inline; */
+	display: inline-block;
 	width: 24px;
 	height: 24px;
+	margin-top: 16px;
+	margin-left: 1%;
 	top: calc(50% - 24px / 2 - 0px);
-	/* margin-left: 0.1%; */
 }
 
 .textLogo {
+	display: inline-block;
 	font-size: 24px;
-
-	/* display: inline; */
-	position: relative;
 	width: 106px;
 	height: 24px;
 	margin-left: 0.54%;
-	top: calc(50% - 24px/2 - 0px);
+	margin-top: 14px;
 }
 
 .selected {
+	display: inline-block;
 	height: 24px;
-	top: calc(50% - 24px/2 - 0px);
-	/* display: inline-block; */
-	position: relative;
-	margin-left: 2.1%;
-	width: 19%;
+	margin-left: 32px;
+	width: 240px;
+	background-color: blue;
 	min-width: 240px;
+	margin-top: 17px;
 }
 
 .btn {
-	position: relative;
-	top: calc(50% - 42px / 2 - 0px);
-	margin-left: 36.3%;
-	left: 0%;
+	/* float: right; */
+	margin-top: 6px;
 	min-width: 139px;
 	height: 42px;
 
@@ -156,31 +175,30 @@ export default {
 }
 
 .iconMess {
-	margin-left: 2.1%;
+	/* float: right; */
+	margin-left: 23px;
 	width: 24px;
 	height: 24px;
-	position: relative;
-	top: calc(50% - 24px/ 2 - 0px);
+	margin-top: 16px;
 	transition: 0.1s;
 }.iconMess:hover {
 	transform: translateY(-3px);
 }
 
 .iconNotification {
-	margin-left: 2.1%;
+	margin-left: 23px;
 	width: 24px;
 	height: 24px;
-	position: relative;
-	top: calc(50% - 24px/ 2 - 0px);
+	margin-top: 16px;
 	transition: 0.1s;
 }.iconNotification:hover {
 	transform: translateY(-3px);
 }
 
 .blockPlus {
-	margin-left: 2.1%;
-	position: relative;
-	top: calc(50% - 28px/ 2 - 0px);
+	display: inline-block;
+	margin-left: 23px;
+	margin-top: 14px;
 	min-width: 66px;
 	height: 28px;
 	border-radius: 36px; 
@@ -189,7 +207,6 @@ export default {
 .BPActive {
 	background-color: #FA961E;
 }
-
 .BPInactive {
 	background-color:  rgba(0, 0, 0, 0.2);
 }
@@ -225,9 +242,12 @@ export default {
 }
 
 .blockAvatar {
-	margin-left: 1.05%;
+	margin-left: 23px;
+	display: inline-block;
 	width: 64px;
 	height: 56px;
+	margin-right: 1px;
+	background-color: blueviolet;
 	position: relative;
 }
 
@@ -262,8 +282,9 @@ export default {
 }
 
 .menu-btn-bar {
+	left: 1px;
 	top: calc(50% - 20px);
-  display: block;
+  display: inline-block;
   width: 40px;
   height: 40px;
   /* background-color: rgb(252, 126, 126); */
