@@ -1,4 +1,6 @@
 .line {
+	display: flex;
+	align-items: center;
 	color: #FFFFFF;
 	opacity: 0.4;
 	font-family: Arial;
@@ -7,5 +9,8 @@
 	font-size: 14px;
 	line-height: 20px;
 	margin-top: 18px;
-	display: flex;
+}
+
+.txtInBasmentColumns {
+	margin-left: 10px
 }

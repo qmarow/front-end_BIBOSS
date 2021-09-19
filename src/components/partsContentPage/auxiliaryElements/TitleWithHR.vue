@@ -27,7 +27,7 @@ export default {
 }
 
 #hr {
-    width: 832px;
+    width: 100%;
     border: 0px;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.2);;

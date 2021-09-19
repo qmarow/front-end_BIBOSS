@@ -16,7 +16,7 @@
     <ContentPage/>
   </div>
   <div id="basement">
-    <Basement/>
+    <!-- <Basement/> -->
   </div>
 </template>
 
@@ -25,25 +25,40 @@
 import Header from './components/Header.vue'
 import MenuBar from './components/MenuBar.vue'
 import ContentPage from './components/ContentPage.vue'
-import Basement from './components/Basement.vue'
+// import Basement from './components/Basement.vue'
 export default {
   props: {},
+  provide: ['width'],
   data() {
     return {
       visibleBar: false,
+      width: document.body.clientWidth,
     }
+  },
+  mounted() {
+  },
+  updated() {
+    console.log("!!!");
   },
   methods: {
     changeVisibleBar() {
       this.visibleBar = !this.visibleBar;
+    },
+    updateWidth() {
+      this.width = document.body.clientWidth;
     }
   },
   components: {
     Header: Header,
     MenuBar: MenuBar,
     ContentPage: ContentPage,
-    Basement: Basement,
-  }
+    // Basement: Basement,
+  },
+  watch: {
+  },
+  created() {
+    window.addEventListener('resize', this.updateWidth);
+  },
 }
 </script>
 
@@ -77,8 +92,8 @@ export default {
 .contentPage {
   z-index: 10;
   position: relative;
-  display: block;
-  /* background-color: rgb(94, 255, 94); */
+  /* display: block; */
+  background-color: rgb(94, 255, 94);
   width: 100%;
   height: 100%;
   /* left: calc(9%); */

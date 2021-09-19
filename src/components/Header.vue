@@ -99,21 +99,21 @@ export default {
 	float: left;
 	height: 56px;
 	/* width: 530px; */
-	background: rgb(78, 78, 252);
+	/* background: rgb(78, 78, 252); */
 }
 
 #right-part-header {
-	float: right;
+	/* float: right; */
 	display: flex;
 	justify-content: right;
 	/* flex-direction: row; */
 	/* width: 550px; */
-	background: rgb(245, 86, 86);
+	/* background: rgb(245, 86, 86); */
 	/* margin-left: 40% */
 }
 
 .header {
-	background-color: brown;
+	/* background-color: brown; */
 	/* display: flex; */
 	height: 56px;
 	width: 100%;
@@ -146,9 +146,9 @@ export default {
 	display: inline-block;
 	height: 24px;
 	margin-left: 32px;
-	width: 240px;
-	background-color: blue;
-	min-width: 240px;
+	width: 239px;
+	/* background-color: blue; */
+	min-width: 239px;
 	margin-top: 17px;
 }
 
@@ -247,7 +247,7 @@ export default {
 	width: 64px;
 	height: 56px;
 	margin-right: 1px;
-	background-color: blueviolet;
+	/* background-color: blueviolet; */
 	position: relative;
 }
 
@@ -329,6 +329,21 @@ export default {
 	transition: 0.2s;
   transform:  rotate(135deg);
   width: 20px;
+}
+
+@media (max-width: 850px) {
+	.selected {
+		display: none;
+	}
+	.btn {
+		display: none;
+	}
+}
+
+@media (max-width: 530px) {
+	.textLogo {
+		display: none;
+	}
 }
 
 </style>

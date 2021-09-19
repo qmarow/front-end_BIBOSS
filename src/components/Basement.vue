@@ -10,8 +10,19 @@
 							<div id="txt-controll">Управление</div>
 					</div>
 			</div>
-			<div>
-				<Section />
+			<div id="columnsBasement">
+				<div :style="{'margin-left': '0px'}" class="columns">
+					<Section />
+				</div>
+				<div class="column">
+					<Project />
+				</div>
+				<div class="column">
+					<BEBOSS />
+				</div>
+				<div class='column'>
+					<SocialNetwork />
+				</div>
 			</div>
 	</div>
 </template>
@@ -20,7 +31,9 @@
 <script>
 import "./componentsBasement/style-column.css"
 import Section from './componentsBasement/Section.vue'
-
+import Project from './componentsBasement/Project.vue'
+import BEBOSS from './componentsBasement/BEBOSS.vue'
+import SocialNetwork from './componentsBasement/SocialNetwork.vue'
 export default {
 	props: {},
 	data() {
@@ -28,6 +41,9 @@ export default {
 	},
 	components: {
 		Section: Section,
+		Project: Project,
+		BEBOSS: BEBOSS,
+		SocialNetwork: SocialNetwork,
 	}
 }
 </script>
@@ -82,6 +98,15 @@ export default {
 #img-svg  {
 		width: 24px;
 		height: 24px;
+}
+
+#columnsBasement {
+	display: flex;
+	/* justify-content: center; */
+}
+
+.column {
+	margin-left: 63px;
 }
 
 </style>

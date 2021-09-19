@@ -11,15 +11,15 @@
 		<div :style="{'margin-top': '32px'}">
 			<FranchiceCost />
 		</div>
-		<div>
+		<!-- <div>
 			<FranchiseDescription />
 		</div>
 		<div id="blockImages">
 			<img v-for="src in srcImages" :key="src" class="imagesFranchise" :src="require('./../../images/' + src)"/>
-		</div>
-		<div>
+		</div> -->
+		<!-- <div>
 			<AgentCard />
-		</div>
+		</div> -->
 	</div>
 </template>
 
@@ -27,9 +27,9 @@
 <script>
 import FranchiceCost from './FranchiseCost.vue'
 import TitleWithHR from './auxiliaryElements/TitleWithHR.vue'
-import FranchiseDescription from './FranchiseDescription.vue'
-import OpeningTag from './auxiliaryElements/OpeningTag.vue'
-import AgentCard from './AgentCard.vue'
+// import FranchiseDescription from './FranchiseDescription.vue'
+// import OpeningTag from './auxiliaryElements/OpeningTag.vue'
+// import AgentCard from './AgentCard.vue'
 export default {
 	props: {},
 	data() {
@@ -40,9 +40,9 @@ export default {
 	components: {
 		FranchiceCost: FranchiceCost,
 		TitleWithHR: TitleWithHR,
-		FranchiseDescription: FranchiseDescription,
-		OpeningTag: OpeningTag,
-		AgentCard: AgentCard,
+		// FranchiseDescription: FranchiseDescription,
+		// OpeningTag: OpeningTag,
+		// AgentCard: AgentCard,
 	}
 }
 </script>
@@ -51,17 +51,17 @@ export default {
 <style scoped>
 
 #main {
-		width: 832px;
-		/* width: 58.9%; */
-		/* background-color: blueviolet; */
-		font-family: Arial;
-		font-style: normal;
+	width: 832px;
+	/* width: 58.9%; */
+	background-color: blueviolet;
+	font-family: Arial;
+	font-style: normal;
 }
 
 .boldText {
-		font-weight: bold;
-		font-size: 24px;
-		line-height: 32px;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 32px;
 }
 
 .imagesFranchise {
@@ -98,6 +98,13 @@ export default {
   /* border-radius: 100px;
   background-color: #606061;
 	height: 10px; */
+}
+
+@media (max-width: 1130px) {
+	#main {
+		width: 96%;
+		margin-left: 2%;
+	}
 }
 
 </style>

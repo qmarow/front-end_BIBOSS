@@ -1,6 +1,6 @@
 <template>
 	<div id="agentInfo">
-		<img src="./../../../images/photoAgent.svg" />
+		<img id='imgAgent' src="./../../../images/photoAgent.svg" />
 		<div id='txtInfo'>
 			<p>Дмитрий Варфоломеев</p>
 			<p>Представитель</p>
@@ -21,6 +21,11 @@ export default {
 
 
 <style scoped>
+
+#imgAgent {
+	height: 48px;
+	width: 48px;
+}
 
 #agentInfo {
 

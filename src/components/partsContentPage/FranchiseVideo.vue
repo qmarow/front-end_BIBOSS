@@ -8,7 +8,7 @@
 			</div>
 		</div>
 		<div id="textPersonalSolution">Видео о франшизе «Персональное решение»</div>
-		<div :style="{'display': 'flex'}">	
+		<div id="blockVideoColumnVote">	
 			<div id="blockVideo">
 				<video id="videoMedia" src="./../../assets/FranchiseVideo.mp4" preload="auto" poster="./../../images/firstCadr.jpg"/>
 				<img @click="startVideo()" src='./../../images/iconPlayVideo.svg' id="btnPlay" :class="controlsVisible == true ? 'btnPlayOff' : 'btnPlayOn'" />
@@ -17,9 +17,9 @@
 				</div>
 			</div>
 			<div id='columnVote'>
-				<span>Голосование</span>
-				<p>Для того, чтобы проголосовать за видео, нужно сделать репост в любой из соцсетей:</p>
-				<div>
+				<span class="txtVote">Голосование</span>
+				<p class="txtVote">Для того, чтобы проголосовать за видео, нужно сделать репост в любой из соцсетей:</p>
+				<div id="btnSocialNet">
 					<a href="https://ru-ru.facebook.com/" :style="{'background-color': 'rgba(31, 59, 116, 1)'}" class="vote">
 						<img src="./../../images/iconFB.svg" />
 						<div class="voteTxt">Голосовать FB</div>
@@ -43,6 +43,7 @@
 <script>
 export default {
 	props: {},
+	inject: ['width'],
 	data() {
 		return {
 			controlsVisible: false,
@@ -75,17 +76,13 @@ export default {
 	padding: 0px;
 	/* display: inline-block; */
 	/* width: 100%; */
-	height: 800px;
-
-	/* transform: matrix(1, 0, 0, -1, 0, 0); */
-	background-color: hotpink;
+	/* height: 800px; */
 }
 
 .medalBlock {
 	top: 28px;
 	position: relative;
 	display: flex;
-	width: 338px;
 	height: 60px;
 	/* transition: 0.1s; */
 }
@@ -104,10 +101,15 @@ export default {
 }
 
 #textPersonalSolution {
-	margin-top: 48px;
-	font-size: 48px;
 	font-family: Arial;
 	font-style: normal;
+	font-weight: bold;
+	margin-top: 48px;
+	font-size: 48px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
 }
 
 #blockVideo {
@@ -118,7 +120,7 @@ export default {
 
 #videoMedia {
 	width: 832px;
-	height: 468px;
+	/* height: 468px; */
 	border-radius: 16.9796px;
 }
 
@@ -182,9 +184,9 @@ export default {
 }
 
 #columnVote {
+
 	margin-top: 46px;
 	margin-left: 10px;
-	display: inline-block;
 	/* background-color: lightsalmon; */
 	width: 256px;
 	font-family: Arial;
@@ -198,6 +200,8 @@ export default {
 	font-size: 16px;
 	line-height: 24px;
 }
+
+
 
 .voteTxt {
 	margin-top: 20px;
@@ -214,7 +218,7 @@ export default {
 	margin-top: 8px;
 	display: flex;
 	border-radius: 30px;
-	width: 256px;
+	/* width: 256px; */
 	height: 60px;
 	text-decoration: none;
 }
@@ -228,6 +232,86 @@ export default {
 	margin-top: 10px;
 	display: flex;
 	justify-content: center;
+}
+
+#blockVideoColumnVote {
+	display: flex;
+	flex-direction: row;
+}
+
+@media (max-width: 1130px) {
+	.mainBlock {
+		padding: 0px 16px;
+	}
+
+	#blockVideoColumnVote {
+		flex-direction: column;
+	}
+	#blockVideo {
+		display: flex;
+		justify-content: center;
+	}
+	#videoMedia {
+		width: 100%;
+	}
+	#columnVote {
+		margin-top: 32px;
+		width: 100%;
+		margin-left: 0px;
+	}
+	#btnSocialNet {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.vote {
+		width: 256px;
+	}
+	.voteTxt {
+		/* display: none; */
+	}
+
+	.txtVote {
+		display: flex;;
+		justify-content: center;
+		text-align: center;
+	}
+
+	#textPersonalSolution {
+		font-size: 36px;
+		/* line-height: 32px; */
+	}
+}
+
+@media (max-width: 830px) {
+	.voteTxt {
+		display: none;
+		width: 24px;
+	}
+
+	.vote {
+		width: 60px;
+		margin-right: 8px;
+	}
+	#btnSocialNet {
+		/* display: flex; */
+		justify-content: center;
+	}
+	#textPersonalSolution {
+		font-family: Arial;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 32px;
+		/* or 133% */
+
+		display: flex;
+		align-items: center;
+		text-align: center;
+	}
+	.close-btn {
+		left: 94%;
+	}
 }
 
 </style>
