@@ -5,7 +5,7 @@
   <div id='personalSolutionW'>
     <PersonalSolutionW />
   </div>
-  <div :style="{'display': 'flex', 'width': '100%', 'justify-content': 'center', 'background-color': '#9df'}">
+  <div :style="{'display': 'flex', 'width': '100%', 'justify-content': 'center'}">
     <div id="aboutCompany">
       <AboutCompany />
       <!-- <hr>
@@ -64,7 +64,7 @@ export default {
 #aboutCompany {
   margin-top: 126px;
   position: relative;
-  background-color: rgb(218, 139, 255);
+  /* background-color: rgb(218, 139, 255); */
 }
 
 #Indicators {
@@ -94,7 +94,7 @@ hr {
   }
   #aboutCompany {
     margin-top: 32px;
-    width: 100%;
+    width: 96%;
   }
 }
 

@@ -8,7 +8,7 @@
 			Без найма кучи народу, закупок, оборудования и “закапывания” миллионов на годы. Первое время можно без офиса.
 		</div>
 		<OpeningTag>Страница франшизы</OpeningTag>
-		<div :style="{'margin-top': '32px'}">
+		<div id="franchiceCost">
 			<FranchiceCost />
 		</div>
 		<!-- <div>
@@ -28,7 +28,7 @@
 import FranchiceCost from './FranchiseCost.vue'
 import TitleWithHR from './auxiliaryElements/TitleWithHR.vue'
 // import FranchiseDescription from './FranchiseDescription.vue'
-// import OpeningTag from './auxiliaryElements/OpeningTag.vue'
+import OpeningTag from './auxiliaryElements/OpeningTag.vue'
 // import AgentCard from './AgentCard.vue'
 export default {
 	props: {},
@@ -41,7 +41,7 @@ export default {
 		FranchiceCost: FranchiceCost,
 		TitleWithHR: TitleWithHR,
 		// FranchiseDescription: FranchiseDescription,
-		// OpeningTag: OpeningTag,
+		OpeningTag: OpeningTag,
 		// AgentCard: AgentCard,
 	}
 }
@@ -53,7 +53,7 @@ export default {
 #main {
 	width: 832px;
 	/* width: 58.9%; */
-	background-color: blueviolet;
+	/* background-color: rgba(97, 216, 93, 0.342); */
 	font-family: Arial;
 	font-style: normal;
 }
@@ -69,6 +69,11 @@ export default {
 	width: 196px;
 	height: 196px;
 	border-radius: 16px;
+}
+
+#franchiceCost {
+	margin: 0px;
+	margin-top: 32px;
 }
 
 #blockImages {
@@ -102,8 +107,10 @@ export default {
 
 @media (max-width: 1130px) {
 	#main {
-		width: 96%;
-		margin-left: 2%;
+		width: 100%;
+	}
+	#franchiceCost {
+		margin-left: 0%;
 	}
 }
 

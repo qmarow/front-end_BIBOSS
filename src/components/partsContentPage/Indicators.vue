@@ -31,7 +31,7 @@ export default {
 #main {
 	font-family: Arial;
 	font-style: normal;
-	width: 256px;
+	width: 250px;
 	height: 305px;
 }
 
@@ -49,7 +49,7 @@ export default {
 }
 
 hr {
-	width: 256px;
+	width: 250px;
 	border: 0px;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.2);;

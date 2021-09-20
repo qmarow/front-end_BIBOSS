@@ -40,10 +40,10 @@ export default {
 <style scoped>
 
 #main {
-	/* display: block; */
+	display: block;
 	border-radius: 16px;
-	width: 808px;
-	padding: 24px 0px 24px 24px;
+	min-width: 232px;
+	padding: 24px 0px 24px 0px;
 	font-family: Arial;
 	font-style: normal;
 	background-color: rgba(30, 160, 30, 0.1);
@@ -51,12 +51,14 @@ export default {
 
 #blockInfo {
 	margin-top: 24px;
+	margin-left: 24px;
 } 
 
 #priceFranchise {
 	font-weight: bold;
 	font-size: 24px;
 	line-height: 32px;
+	margin-left: 24px;
 }
 
 .paragraph {
@@ -82,11 +84,12 @@ export default {
 }
 
 #hr {
-	margin: 24px 0px 0px;
 	background: rgba(0, 0, 0, 0.2);
 	border: 0px;
 	height: 1px;
 	width: 784px;
+	width: 92%;
+	margin-top: 24px;
 }
 
 #downloadBlock {
@@ -128,6 +131,32 @@ export default {
 	}
 	100% {
     margin-top: 0px;
+	}
+}
+
+@media (max-width: 1130px) {
+	#main {
+		background-color: rgb(255, 173, 143);
+	}
+	#priceFranchise {
+		text-align: center;
+	}
+	.info {
+		background-color: cornflowerblue;
+		margin-left: 24px;
+		width: 77.99%;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 24px;
+		margin-right: 1px;
+	}
+	.paragraph {
+		background-color: darkgoldenrod;
+	}
+	#blockInfo {
+		background-color: cyan;
+		margin-top: 24px;
+		margin-right: 24px;
 	}
 }
 
