@@ -11,15 +11,15 @@
 		<div id="franchiceCost">
 			<FranchiceCost />
 		</div>
-		<!-- <div>
+		<div id="franchiseDescription">
 			<FranchiseDescription />
 		</div>
 		<div id="blockImages">
-			<img v-for="src in srcImages" :key="src" class="imagesFranchise" :src="require('./../../images/' + src)"/>
-		</div> -->
-		<!-- <div>
+			<img v-for="(src, i) in srcImages" :key="i" class="imagesFranchise" :src="require('./../../images/' + src)"/>
+		</div>
+		<div>
 			<AgentCard />
-		</div> -->
+		</div>
 	</div>
 </template>
 
@@ -27,22 +27,22 @@
 <script>
 import FranchiceCost from './FranchiseCost.vue'
 import TitleWithHR from './auxiliaryElements/TitleWithHR.vue'
-// import FranchiseDescription from './FranchiseDescription.vue'
+import FranchiseDescription from './FranchiseDescription.vue'
 import OpeningTag from './auxiliaryElements/OpeningTag.vue'
-// import AgentCard from './AgentCard.vue'
+import AgentCard from './AgentCard.vue'
 export default {
 	props: {},
 	data() {
 		return {
-			srcImages: ['firstExample.jpg', 'secondExample.jpg', 'thirdExample.jpg', 'fourthExample.jpg', 'firstExample.jpg']
+			srcImages: ['firstExample.jpg', 'secondExample.jpg', 'thirdExample.jpg', 'fourthExample.jpg']
 		}
 },
 	components: {
 		FranchiceCost: FranchiceCost,
 		TitleWithHR: TitleWithHR,
-		// FranchiseDescription: FranchiseDescription,
+		FranchiseDescription: FranchiseDescription,
 		OpeningTag: OpeningTag,
-		// AgentCard: AgentCard,
+		AgentCard: AgentCard,
 	}
 }
 </script>
@@ -52,8 +52,7 @@ export default {
 
 #main {
 	width: 832px;
-	/* width: 58.9%; */
-	/* background-color: rgba(97, 216, 93, 0.342); */
+	background-color: rgba(46, 114, 44, 0.637);
 	font-family: Arial;
 	font-style: normal;
 }
@@ -65,10 +64,14 @@ export default {
 }
 
 .imagesFranchise {
-	margin-right: 17px;
+	margin-left: 16px;
 	width: 196px;
 	height: 196px;
 	border-radius: 16px;
+	transition: .2s;
+} 
+.imagesFranchise:first-child {
+	margin-left: 0px;
 }
 
 #franchiceCost {
@@ -78,10 +81,9 @@ export default {
 
 #blockImages {
 	margin-top: 32px;
-	width: 842px;
-	display: flex;
-	height: 220px;
-	overflow: auto;
+	width: 100%;
+	display: inline-block;
+	transition: .2s;
 }
 
 #blockImages::-webkit-scrollbar {
@@ -90,6 +92,9 @@ export default {
   background-color: #ffffff;
   border-radius: 10px;
 	margin-bottom: 6px;
+}
+#blockImages:nth-child(2) {
+	width: 10px;
 }
 
 #blockImages::-webkit-scrollbar-thumb {
@@ -105,12 +110,46 @@ export default {
 	height: 10px; */
 }
 
+#franchiseDescription {
+	margin-top: 32px;
+}
+
 @media (max-width: 1130px) {
 	#main {
 		width: 100%;
 	}
 	#franchiceCost {
 		margin-left: 0%;
+	}
+	.imagesFranchise {
+		margin-left: 2%;
+		width: 23%;
+		height: 23%;
+		border-radius: 16px;
+	}
+	.imagesFranchise:first-child {
+		margin-left: 1%;
+	}
+}
+
+@media (max-width: 830px) {
+	#blockImages {
+		text-align: center;
+		margin-top: 24px;
+		width: 100%;
+		display: inline-block;
+		/* height: 220px; */
+		overflow: auto;
+	}
+	.imagesFranchise {
+		/* background-color: brown; */
+		margin: 0px;
+		padding: 4px;
+		padding-top: 4px;
+		padding-bottom: 0px;
+		width: 167px;
+		height: 167px;
+		border-radius: 8px;
 	}
 }
 

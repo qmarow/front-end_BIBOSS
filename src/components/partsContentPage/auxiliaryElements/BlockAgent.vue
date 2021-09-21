@@ -1,9 +1,11 @@
 <template>
-	<div id="agentInfo">
-		<img id='imgAgent' src="./../../../images/photoAgent.svg" />
-		<div id='txtInfo'>
-			<p>Дмитрий Варфоломеев</p>
-			<p>Представитель</p>
+	<div :style="{'background-color': '#fff', 'display': 'inline-block'}">
+		<div id="agentInfo">
+			<img id='imgAgent' src="./../../../images/photoAgent.svg" />
+			<div id='txtInfo'>
+				<p>Дмитрий Варфоломеев</p>
+				<p>Представитель</p>
+			</div>
 		</div>
 	</div>
 </template>
@@ -28,7 +30,6 @@ export default {
 }
 
 #agentInfo {
-
 	display: flex;
 	font-family: Arial;
 	font-style: normal;

@@ -3,7 +3,7 @@
 		<div>
 			<BlockAgent />
 		</div>
-		<div :style="{'display': 'flex'}">
+		<!-- <div :style="{'display': 'flex'}">
 			<div id="blockInput">
 				<input id="name" type='text' placeholder="Ваше имя"/>
 				<input id="mail" type='text' placeholder="E-mail"/>
@@ -45,7 +45,7 @@
 					Обсудить возможность скидки
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </template>
 
@@ -68,9 +68,10 @@ export default {
 <style scoped>
 
 #main {
+	width: 700px;
 	padding: 24px 0px 24px 24px;
 	border-radius: 16px;
-	background-color: #ECEEF2;
+	background-color: #5077c4;
 	font-family: Arial;
 	font-style: normal;
 }

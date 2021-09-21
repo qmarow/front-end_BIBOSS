@@ -68,6 +68,7 @@ export default {
 	line-height: 24px;
 	color: rgba(0, 0, 0, 0.52);
 	width: 200px;
+	transition: .2s;
 }
 
 .row {
@@ -76,6 +77,7 @@ export default {
 }
 
 .info {
+	transition: .2s;
 	margin-left: 24px;
 	width: 560px;
 	font-weight: normal;
@@ -111,7 +113,6 @@ export default {
 }
 
 #imgDownload:hover #img{
-	/* background-color: crimson; */
 	animation: jump 2s infinite;
 }
 
@@ -135,14 +136,10 @@ export default {
 }
 
 @media (max-width: 1130px) {
-	#main {
-		background-color: rgb(255, 173, 143);
-	}
 	#priceFranchise {
 		text-align: center;
 	}
 	.info {
-		background-color: cornflowerblue;
 		margin-left: 24px;
 		width: 77.99%;
 		font-weight: normal;
@@ -150,13 +147,27 @@ export default {
 		line-height: 24px;
 		margin-right: 1px;
 	}
-	.paragraph {
-		background-color: darkgoldenrod;
-	}
 	#blockInfo {
-		background-color: cyan;
 		margin-top: 24px;
 		margin-right: 24px;
+	}
+}
+
+@media (max-width: 830px) {
+	.row {
+		display: flex;
+		flex-direction: column;
+	}
+	.paragraph {
+		margin-left: 24px;
+	}
+	.info {
+		margin-top: 4px;
+	}
+	#priceFranchise {
+		text-align: center;
+		font-size: 18px;
+		line-height: 24px;
 	}
 }
 
