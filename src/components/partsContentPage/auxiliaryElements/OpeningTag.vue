@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div @click="active = !active" :style="{'display': 'flex', 'font-size': '16px', 'line-height': '24px', 'margin-top': '16px'}" class="boldText">
+		<div @click="active = !active" id="blockTxtIcon" class="boldText">
 			<slot />
 			<div class='menu-btn' :class="active ? 'menu-btn-1' : ''">
 				<span></span>
@@ -31,6 +31,12 @@ export default {
 		line-height: 32px;
 }
 
+#blockTxtIcon {
+	display: flex;
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: 16px;
+}
 
 .menu-btn {
 	margin-top: 2.5px;

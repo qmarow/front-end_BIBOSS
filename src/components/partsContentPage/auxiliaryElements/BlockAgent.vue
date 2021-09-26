@@ -1,5 +1,5 @@
 <template>
-	<div :style="{'background-color': '#fff', 'display': 'inline-block'}">
+	<div :style="{'display': 'inline-block'}">
 		<div id="agentInfo">
 			<img id='imgAgent' src="./../../../images/photoAgent.svg" />
 			<div id='txtInfo'>

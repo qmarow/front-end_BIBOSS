@@ -8,12 +8,14 @@
   <div :style="{'display': 'flex', 'width': '100%', 'justify-content': 'center'}">
     <div id="aboutCompany">
       <AboutCompany />
-      <!-- <hr>
-      <OtherParticipants /> -->
     </div>
     <div id="Indicators">
       <Indicators />
     </div>
+  </div>
+  <div id="OtherParticipants">
+    <hr />
+    <OtherParticipants />
   </div>
 </template>
 
@@ -23,7 +25,7 @@ import FranchiseVideo from './partsContentPage/FranchiseVideo.vue'
 import PersonalSolutionWindow from './partsContentPage/PersonalSolutionWindow.vue'
 import AboutCompany from './partsContentPage/AboutCompany.vue'
 import Indicators from './partsContentPage/Indicators.vue'
-// import OtherParticipants from './partsContentPage/OtherParticipants.vue'
+import OtherParticipants from './partsContentPage/OtherParticipants.vue'
 export default {
   props: {},
   data() {
@@ -34,7 +36,7 @@ export default {
       PersonalSolutionW: PersonalSolutionWindow,
       AboutCompany: AboutCompany,
       Indicators: Indicators,
-      // OtherParticipants: OtherParticipants,
+      OtherParticipants: OtherParticipants,
   }
 }
 </script>
@@ -64,7 +66,6 @@ export default {
 #aboutCompany {
   margin-top: 126px;
   position: relative;
-  /* background-color: rgb(218, 139, 255); */
 }
 
 #Indicators {
@@ -75,7 +76,18 @@ export default {
   top: 60px;
 }
 
+#OtherParticipants {
+  margin-top: 24px;
+  /* background-color: rgb(99, 252, 252); */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* padding: 48px; */
+}
+
 hr {
+  margin: 0px;
+  width: 1120px;
   border: 0px;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.2);;
@@ -95,6 +107,18 @@ hr {
   #aboutCompany {
     margin-top: 32px;
     width: 96%;
+  }
+  /* #OtherParticipants {
+    width: 96%;
+  } */
+  hr {
+    width: 96%;
+  }
+}
+
+@media (max-width: 830px) {
+  hr {
+    display: none;
   }
 }
 

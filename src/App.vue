@@ -16,7 +16,7 @@
     <ContentPage/>
   </div>
   <div id="basement">
-    <!-- <Basement/> -->
+    <Basement/>
   </div>
 </template>
 
@@ -25,7 +25,7 @@
 import Header from './components/Header.vue'
 import MenuBar from './components/MenuBar.vue'
 import ContentPage from './components/ContentPage.vue'
-// import Basement from './components/Basement.vue'
+import Basement from './components/Basement.vue'
 export default {
   props: {},
   provide: ['width'],
@@ -52,7 +52,7 @@ export default {
     Header: Header,
     MenuBar: MenuBar,
     ContentPage: ContentPage,
-    // Basement: Basement,
+    Basement: Basement,
   },
   watch: {
   },

@@ -42,21 +42,4 @@ export default {
 
 <style scoped>
 
-img.img  svg{
-	vertical-align: middle;
-    stroke: #fcc10a;
-    stroke-width: 2px;
-    fill: #fff;
-}
-
-#title{
-	font-weight: bold;
-	font-size: 14px;
-	line-height: 20px;
-	color: #FFFFFF;
-	opacity: 0.6;
-	margin-left: 4px;
-	margin-top: 24px;
-}
-
 </style>

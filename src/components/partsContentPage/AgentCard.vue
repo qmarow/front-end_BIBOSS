@@ -3,22 +3,31 @@
 		<div>
 			<BlockAgent />
 		</div>
-		<!-- <div :style="{'display': 'flex'}">
+		<div id='blockData'>
 			<div id="blockInput">
 				<input id="name" type='text' placeholder="Ваше имя"/>
 				<input id="mail" type='text' placeholder="E-mail"/>
 				<input id="phone" type='text' placeholder="Номер телефона"/>
 				<textarea>Здравствуйте. Заинтересовало Ваше предложение, вышлите подробности на почту.</textarea>
 				<div id="captcha">
-					<input id="checkBox" type="checkbox">
-					<span :style="{'margin-left': '8px'}">Я не робот</span>
-					<span id="txtChSec" >Проверка безопасности</span>
+					<div id="divCheckBoxAndTxt">
+						<input id="checkBox" type="checkbox">
+						<span :style="{'margin-left': '8px'}">Я не робот</span>
+					</div>
+					<div id="divTxtChSec">
+						<span id="txtChSec" >Проверка безопасности</span>
+					</div>
 				</div>
 				<button id="btnSendMess">Отправить сообщение</button>
+				<div id="blockSecTxtIcon">
+					<img src="./../../images/iconProtection.svg" >
+					<span id="secTxt">Ваши данные в полной безопасности. Они видны только автору объявления.</span>
+				</div>
+				<hr id='hr'>
 			</div>
 			<div id="blockQuestions">
-				<div :style="{'font-weight': 'bold', 'line-height': '24px'}"
-					>Что можно обсудитьс представителем:
+				<div id="titleQuestions">
+					Что можно обсудить с представителем:
 				</div>
 				<div class="question">
 					<img class="imgOkey" src="./../../images/iconOkey.svg" />
@@ -45,7 +54,7 @@
 					Обсудить возможность скидки
 				</div>
 			</div>
-		</div> -->
+		</div>
 	</div>
 </template>
 
@@ -68,12 +77,17 @@ export default {
 <style scoped>
 
 #main {
-	width: 700px;
-	padding: 24px 0px 24px 24px;
+	box-sizing: border-box;
+	width: 832px;
+	padding: 24px;
 	border-radius: 16px;
-	background-color: #5077c4;
+	background-color: rgba(236, 238, 242, 1);
 	font-family: Arial;
 	font-style: normal;
+}
+
+#blockData {
+	display: flex;
 }
 
 #blockInput {
@@ -133,9 +147,8 @@ textarea {
 	border-radius: 6px;
 	width: 378px;
 	height: 80px;
-	display: flex;
+
 	margin-top: 8px;
-	align-items: center;
 	padding-left: 16px;
 	padding-right: 16px;
 }
@@ -149,15 +162,27 @@ textarea {
 	display: inline-block;
 }
 
+#divCheckBoxAndTxt {
+	margin-top: 24px;
+	display: flex;
+	align-items: center;
+	float: left;
+}
+
 #txtChSec {
 	display: flex;
-	font-size: 14px;
-	line-height: 20px;
 	text-align: right;
 	color: rgba(0, 0, 0, 0.52);
-	width: 40px;
-	margin-left: 133px;
-	margin-left: 38.5%;
+	font-size: 14px;
+	line-height: 20px;
+	width: 90px;
+	/* margin-left: 38.5%; */
+}
+
+#divTxtChSec {
+	margin-top: 21px;
+	display: flex;
+	justify-content: right;
 }
 
 #btnSendMess{
@@ -181,6 +206,19 @@ textarea {
 	height: 50px;
 }
 
+#blockSecTxtIcon {
+	width: 378px;
+	margin-top: 16px;
+	display: flex;
+	font-size: 14px;
+	line-height: 20px;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+#secTxt {
+	margin-left: 16px;
+}
+
 #blockQuestions {
 	width: 370px;
 	margin-top: 16px;
@@ -188,15 +226,117 @@ textarea {
 	/* background-color: azure; */
 }
 
+#titleQuestions {
+	font-weight: bold;
+	line-height: 24px;
+}
+
 .question {
 	margin-top: 16px;
 	line-height: 24px;
+	display: flex;
 }
 
 .imgOkey {
 	margin-right: 11px;
 	width: 18px;
 	height: 13px;
+}
+
+#hr {
+	background: rgba(0, 0, 0, 0.2);
+	border: 0px;
+	height: 1px;
+	width: 100%;
+	margin-top: 24px;
+	display: none;
+}
+
+@media (max-width: 1130px) {
+	#blockData {
+		display: flex;
+		/* flex-direction: column; */
+		/* align-i.tems: center; */
+		justify-content: space-around;
+	}
+	#blockInput {
+		display: flex;
+
+		width: fit-content;
+	}
+	#blockQuestions {
+		margin-left: 0px;
+		width: fit-content;
+	}
+}
+
+@media (max-width: 1035px) {
+	#blockQuestions {
+		margin-left: 16px;
+		width: fit-content;
+	}
+}
+
+@media (max-width: 830px) {
+	#blockInput {
+		width: 70%;
+	}
+	#blockQuestions {
+
+		width: 70%;
+	}
+	input, textarea {
+		width: 100%;
+	}
+	#captcha {
+		width: 100%;
+	}
+	#btnSendMess {
+		width: 100%;
+	} #btnSendMess:hover {
+		width: 100%;
+	}
+
+	#blockSecTxtIcon {
+		width: 100%;
+	}
+}
+
+@media (max-width: 625px) {
+	#blockData {
+		flex-direction: column;
+	}
+	#blockInput {
+		width: 100%;
+		display: flex;
+		align-items: center;
+	}
+	#blockQuestions {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 0px;
+		margin-top: 24px;
+		box-sizing: border-box;
+		align-items: right;
+		/* display: flex; */
+		/* align-items: center; */
+	}
+	input, textarea {
+		width: 100%;
+	}
+	#captcha {
+		width: 100%;
+	}
+	#hr {
+		display: block;
+	}
+
+	#titleQuestions {
+		font-weight: bold;
+		line-height: 24px;
+		text-align: center;
+	}
 }
 
 </style>

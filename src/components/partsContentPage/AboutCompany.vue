@@ -52,7 +52,6 @@ export default {
 
 #main {
 	width: 832px;
-	background-color: rgba(46, 114, 44, 0.637);
 	font-family: Arial;
 	font-style: normal;
 }
