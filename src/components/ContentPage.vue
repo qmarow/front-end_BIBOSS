@@ -44,7 +44,6 @@ export default {
 
 <style scoped>
 .FranchiseVideo {
-  /* margin-left: 1px; */
   z-index: 1;
 	display: flex;
   justify-content: center;
@@ -78,11 +77,9 @@ export default {
 
 #OtherParticipants {
   margin-top: 24px;
-  /* background-color: rgb(99, 252, 252); */
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* padding: 48px; */
 }
 
 hr {
@@ -108,9 +105,6 @@ hr {
     margin-top: 32px;
     width: 96%;
   }
-  /* #OtherParticipants {
-    width: 96%;
-  } */
   hr {
     width: 96%;
   }

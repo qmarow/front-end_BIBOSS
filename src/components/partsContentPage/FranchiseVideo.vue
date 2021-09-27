@@ -74,9 +74,6 @@ export default {
 
 .mainBlock {
 	padding: 0px;
-	/* display: inline-block; */
-	/* width: 100%; */
-	/* height: 800px; */
 }
 
 .medalBlock {
@@ -84,7 +81,6 @@ export default {
 	position: relative;
 	display: flex;
 	height: 60px;
-	/* transition: 0.1s; */
 }
 
 .textsMedal {
@@ -120,7 +116,6 @@ export default {
 
 #videoMedia {
 	width: 832px;
-	/* height: 468px; */
 	border-radius: 16.9796px;
 }
 
@@ -187,7 +182,6 @@ export default {
 
 	margin-top: 46px;
 	margin-left: 10px;
-	/* background-color: lightsalmon; */
 	width: 256px;
 	font-family: Arial;
 	font-style: normal;
@@ -218,7 +212,6 @@ export default {
 	margin-top: 8px;
 	display: flex;
 	border-radius: 30px;
-	/* width: 256px; */
 	height: 60px;
 	text-decoration: none;
 }
@@ -267,9 +260,6 @@ export default {
 	.vote {
 		width: 256px;
 	}
-	.voteTxt {
-		/* display: none; */
-	}
 
 	.txtVote {
 		display: flex;;
@@ -279,7 +269,6 @@ export default {
 
 	#textPersonalSolution {
 		font-size: 36px;
-		/* line-height: 32px; */
 	}
 }
 

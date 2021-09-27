@@ -24,6 +24,12 @@
 					<div v-for="i in 5" :key="i" :style="getActive(i)"></div>
 				</div>
 			</div>
+			<div id="entrance">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M15 7C15 5.34314 13.6569 4 12 4C10.3431 4 9 5.34314 9 7C9 8.65686 10.3431 10 12 10C13.6569 10 15 8.65686 15 7ZM17 7C17 9.76143 14.7614 12 12 12C9.23857 12 7 9.76143 7 7C7 4.23858 9.23857 2 12 2C14.7614 2 17 4.23858 17 7ZM21 18.9283C21.122 20.6085 19.7389 22 18.0507 22L5.95681 22C4.26854 22 2.88548 20.6085 3.0075 18.9283C3.28678 15.0828 7.26692 13 12.0001 13C16.7239 13 20.7183 15.0499 21 18.9283ZM19.005 19.0732C18.7951 16.1819 15.6055 15 11.9998 15C8.37245 15 5.20898 16.2238 5.00204 19.0732C4.96645 19.5633 5.4005 20 5.95661 20L18.0505 20C18.6066 20 19.0406 19.5633 19.005 19.0732Z" fill="black" fill-opacity="0.2"/>
+				</svg>
+				<span>Войти</span>
+			</div>
 		</div>
 	</div>
 </template>
@@ -98,23 +104,14 @@ export default {
 	display: flex;
 	float: left;
 	height: 56px;
-	/* width: 530px; */
-	/* background: rgb(78, 78, 252); */
 }
 
 #right-part-header {
-	/* float: right; */
 	display: flex;
 	justify-content: right;
-	/* flex-direction: row; */
-	/* width: 550px; */
-	/* background: rgb(245, 86, 86); */
-	/* margin-left: 40% */
 }
 
 .header {
-	/* background-color: brown; */
-	/* display: flex; */
 	height: 56px;
 	width: 100%;
 
@@ -147,13 +144,11 @@ export default {
 	height: 24px;
 	margin-left: 32px;
 	width: 239px;
-	/* background-color: blue; */
 	min-width: 239px;
 	margin-top: 17px;
 }
 
 .btn {
-	/* float: right; */
 	margin-top: 6px;
 	min-width: 139px;
 	height: 42px;
@@ -242,12 +237,10 @@ export default {
 }
 
 .blockAvatar {
-	margin-left: 23px;
 	display: inline-block;
 	width: 64px;
 	height: 56px;
 	margin-right: 1px;
-	/* background-color: blueviolet; */
 	position: relative;
 }
 
@@ -279,6 +272,18 @@ export default {
 	left: 14px;
 	width: 35px;
 	height: 4px;
+}
+
+#entrance {
+	display: none;
+	height: 56px;
+	align-items: center;
+	margin-left: 10px;
+} #entrance span {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	margin: 0px 8px;
 }
 
 .menu-btn-bar {
@@ -343,6 +348,18 @@ export default {
 @media (max-width: 530px) {
 	.textLogo {
 		display: none;
+	}
+	.blockAvatar {
+		display: none;
+	}
+	.iconMess {
+		display: none;
+	}
+	.iconNotification {
+		display: none;
+	}
+	#entrance {
+		display: flex;
 	}
 }
 

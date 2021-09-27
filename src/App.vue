@@ -141,5 +141,10 @@ export default {
   opacity: 0;
 }
 
+@media (max-width: 1130px) {
+  #basement {
+    display: none;
+  }
+}
 
 </style>

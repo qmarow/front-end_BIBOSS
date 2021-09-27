@@ -21,12 +21,10 @@
 export default {
 	props: {
 			options: {
-					type: Array,
-					// default: null,
+				type: Array,
 			},
 			fontSize: {
 				type: String, 
-				// default: '110px',
 			},
 			isVisibleProps: {
 				type: Number,
@@ -135,7 +133,6 @@ export default {
 }
 
 .select {
-	/* background-color: rgba(255, 74, 74, 0.493); */
 	display: inline-block;
 	font-family: Arial;
 	font-style: normal;
@@ -176,8 +173,6 @@ export default {
 	border-top-width: 0px;
 	border-right-width: 0px;
 	border-left-width: 0px;
-	/* background-color: lightgoldenrodyellow; */
-	/* width: 100px; */
 }
 
 .imgBlock {
@@ -224,14 +219,12 @@ export default {
 .opt-enter-active {
 	transition: 0.1s;
 	opacity: 0;
-	/* background: rgb(34, 129, 173); */
 	transform: translateY(-10px);
 }
 
 .opt-leave-active {
 	transition: 0.1s;
 	opacity: 0;
-	/* background: rgb(34, 129, 173); */
 	transform: translateY(-10px);
 }
 

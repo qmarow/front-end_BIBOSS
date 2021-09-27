@@ -67,7 +67,6 @@ export default {
 	transition: 1s;
 	display: flex;
 	justify-content: center;
-	/* align-items: center; */
 	top: 0px;
 	left: 0px;
 	position: absolute;

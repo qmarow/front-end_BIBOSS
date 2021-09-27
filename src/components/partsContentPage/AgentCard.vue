@@ -255,8 +255,6 @@ textarea {
 @media (max-width: 1130px) {
 	#blockData {
 		display: flex;
-		/* flex-direction: column; */
-		/* align-i.tems: center; */
 		justify-content: space-around;
 	}
 	#blockInput {
@@ -319,8 +317,6 @@ textarea {
 		margin-top: 24px;
 		box-sizing: border-box;
 		align-items: right;
-		/* display: flex; */
-		/* align-items: center; */
 	}
 	input, textarea {
 		width: 100%;

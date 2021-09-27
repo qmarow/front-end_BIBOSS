@@ -17,7 +17,7 @@
 		<div id="blockImages">
 			<img v-for="(src, i) in srcImages" :key="i" class="imagesFranchise" :src="require('./../../images/' + src)"/>
 		</div>
-		<div>
+		<div :style="{'margin-top': '32px'}">
 			<AgentCard />
 		</div>
 	</div>
@@ -102,13 +102,6 @@ export default {
   background-color: #73ff66c9;
 }
 
-#blockImages::-webkit-scrollbar-track {
-  /* -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.2); */
-  /* border-radius: 100px;
-  background-color: #606061;
-	height: 10px; */
-}
-
 #franchiseDescription {
 	margin-top: 32px;
 }
@@ -137,11 +130,9 @@ export default {
 		margin-top: 24px;
 		width: 100%;
 		display: inline-block;
-		/* height: 220px; */
 		overflow: auto;
 	}
 	.imagesFranchise {
-		/* background-color: brown; */
 		margin: 0px;
 		padding: 4px;
 		padding-top: 4px;
